@@ -29,7 +29,7 @@ class AuthService {
       return await _auth.signInWithCredential(credential);
     } catch (e) {
       print("Error signing in with Google: $e");
-      return null;
+      throw Exception('Google Sign-In Failed: $e');
     }
   }
 
